@@ -1,0 +1,66 @@
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+        <div class="form-group">
+          <label for="id">Id</label>
+          <input type="text" [(ngModel)]="stockExchange.id" 
+            class="form-control" 
+            id="id" 
+            name="id" 
+            placeholder="Enter id"
+            required #name="ngModel">
+        </div>
+        <div [hidden]="!name.pristine" class="alert alert-danger">Id is required</div>
+
+
+
+        <div class="form-group">
+          <label for="sename">StockExchange Name</label>
+          <input type="text" [(ngModel)]="stockExchange.name" 
+            class="form-control" 
+            id="sename" 
+            name="name" 
+            placeholder="Enter stockexchange name"
+            required #sename="ngModel">
+        </div>
+        <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div>
+
+
+        <div class="form-group">
+          <label for="sedesc">Description</label>
+          <input type="text" [(ngModel)]="stockExchange.desc" 
+            class="form-control" 
+            id="sedesc" 
+            name="description" 
+            placeholder="Enter description"
+          ><br>
+        </div>
+        
+     
+        <div class="form-group">
+          <label for="seaddress">Contact Address</label>
+          <input type="text" [(ngModel)]="stockExchange.address" 
+            class="form-control" 
+            id="seaddress" 
+            name="address" 
+            placeholder="Enter Address"
+           ><br>
+        </div>
+     
+
+        <div class="form-group">
+          <label for="remarks">Remarks</label>
+          <input type="text" [(ngModel)]="stockExchange.remarks" 
+            class="form-control" 
+            id="remarks" 
+            name="remarks" 
+            placeholder="Enter remarks"
+            >
+        </div>
+       
+
+       
+        <button type="submit" [disabled]="!userForm.form.valid" 
+          class="btn btn-info">Submit</button>
+      </form>
+    </div></div>

@@ -1,0 +1,33 @@
+
+
+<div>
+<button class="btn btn-primary" (click)=goToStockExchangeForm()>Add Stock Exchange</button>
+</div>
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">StockExchange</th>
+            <th scope="col">Description</th>
+            <th scope="col">Contact Address</th>
+            <th scope="col">Remarks</th>
+            
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let stockExchange of stockExchange">
+            <td>{{ stockExchange.id }}</td>
+            <td>{{ stockExchange.name }}</td>
+            <td>{{ stockExchange.desc }}</td>
+            <td>{{ stockExchange.address}}</td>
+            <td>{{ stockExchange.remarks }}</td>
+            
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

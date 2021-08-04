@@ -1,0 +1,112 @@
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+        <div class="form-group">
+          <label for="id">Id</label>
+          <input type="text" [(ngModel)]="company.cid" 
+            class="form-control" 
+            id="id" 
+            name="id" 
+            placeholder="Enter id"
+        ><br>
+        </div>
+      
+
+        <div class="form-group">
+            <label for="ccode">Company Code</label>
+            <input type="text" [(ngModel)]="company.ccode" 
+              class="form-control" 
+              id="ccode" 
+              name="ccode" 
+              placeholder="Enter company code"
+            ><br>
+          </div>
+
+
+        <div class="form-group">
+          <label for="cname">Company Name</label>
+          <input type="text" [(ngModel)]="company.cname" 
+            class="form-control" 
+            id="cname" 
+            name="cname" 
+            placeholder="Enter Company name"
+            ><br>
+        </div>
+        
+
+
+        
+     
+        <div class="form-group">
+          <label for="turnover">Turnover</label>
+          <input type="text" [(ngModel)]="company.turnover" 
+            class="form-control" 
+            id="turnover" 
+            name="turnover" 
+            placeholder="Enter Company Turnover"
+           ><br>
+        </div>
+     
+
+        <div class="form-group">
+          <label for="ceo">CEO</label>
+          <input type="text" [(ngModel)]="company.ceo" 
+            class="form-control" 
+            id="ceo" 
+            name="ceo" 
+            placeholder="Enter CEO Name"
+            ><br>
+        </div>
+
+        <div class="form-group">
+            <label for="bod">Board Of Directors</label>
+            <input type="text" [(ngModel)]="company.bod" 
+              class="form-control" 
+              id="bod" 
+              name="bod" 
+              placeholder="Enter board of Directors "
+              ><br>
+          </div>
+
+        <div>
+            <label for="stockex">Stockexchanges</label>
+            <select [(ngModel)]="company.name" 
+              class="form-select" 
+              id="stockex"
+              name="stockex">
+            
+            <option>NSE</option>
+             <option>BSE</option>
+              
+          </select>
+              <br>
+          </div>
+
+          <div class="form-group">
+            <label for="sector">Sector</label>
+            <input type="text" [(ngModel)]="company.sector" 
+              class="form-control" 
+              id="sector" 
+              name="sector" 
+              placeholder="Enter Sector Name"
+              >
+          </div>
+
+
+          <div class="form-group">
+            <label for="brief">Description</label>
+            <input type="text" [(ngModel)]="company.brief" 
+              class="form-control" 
+              id="brief" 
+              name="brief" 
+              placeholder="Describe the company.."
+              >
+          </div>
+       
+
+       
+        <button type="submit" 
+          class="btn btn-info">Submit</button>
+      </form>
+    </div></div>
+

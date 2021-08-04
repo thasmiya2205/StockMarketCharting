@@ -1,0 +1,44 @@
+
+    <div  class="col-md-8 form-group">
+      <div class="input-group">
+        <div class="custom-file">
+          <input
+            type="file"
+            class="form-control"
+            (change)="addFile($event)"
+            placeholder="Upload file"
+            id="excel"
+            accept=".csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+          <button class="btn btn-primary" (click)="uploadStockPrices()">Upload</button>
+        </div>
+      </div>
+    </div>
+    <div class="card my-5">
+      <div class="card-body">
+        <table class="table table-bordered table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Company Code</th>
+              <th scope="col">Stockexchange</th>
+              <th scope="col">Price per share</th>
+              <th scope="col">Date</th>
+              <th scope="col">Time</th>
+              
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let stockprice of stockPrices">
+              
+              <td>{{ stockprice.ccode }}</td>
+              <td>{{ stockprice.stockex }}</td>
+              <td>{{ stockprice.ppshare}}</td>
+              <td>{{ stockprice.date|date }}</td>
+              <td>{{ stockprice.time }}</td>
+              
+  
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>

@@ -1,0 +1,43 @@
+
+
+<div>
+ 
+
+    <button class="btn btn-primary" (click)=goToIpoForm()>Add Ipo</button>
+  
+    
+    
+  
+  
+  </div>
+  <div class="card my-5">
+      <div class="card-body">
+        <table class="table table-bordered table-striped">
+          <thead class="thead-dark">
+            <tr>
+             
+              <th scope="col">Company name</th>
+              <th scope="col">Price Per Share</th>
+              <th scope="col">Total shares</th>
+              <th scope="col">Open Time</th>
+              <th scope="col">Remarks</th>
+              
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ipo of ipo">
+              
+              <td>{{ipo.cname}}</td>
+              <td>{{ ipo.ppshare }}</td>
+              <td>{{ ipo.totalshares}}</td>
+              <td>{{ipo.opentime }}</td>
+              <td>{{ipo.remarks}}</td>
+              <td><button (click)="deleteIpo(ipo.id)" class="btn btn-warning">Delete</button></td>
+              <td><button (click)="goToIpoForm()" class="btn btn-warning float-right">Edit</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
